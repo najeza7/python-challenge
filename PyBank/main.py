@@ -51,20 +51,21 @@ print ("Financial Analysis")
 print ("----------------------------")
 print(f"Total Months: {months}")
 print(f"Total: ${total}")
-print(f"Average Change: ${average}")
+print(f"Average Change: ${round(average,2)}")
 print(f"Greatest Increase in Profits: {month_dif[i_increase]} (${max_increase})")
 print(f"Greatest Decrease in Profits: {month_dif[i_decrease]} (${max_decrease})")
 
 
-# Specify the file to write to
+# Specify the path for the new file
 output_path = os.path.join(".", "analysis", "analysis_pybank.txt")
 
+# Write into the new text file
 with open (output_path, "w") as txt_file:
     print ("Financial Analysis", file = txt_file)
     print ("----------------------------", file = txt_file)
     print(f"Total Months: {months}", file = txt_file)
     print(f"Total: ${total}", file = txt_file)
-    print(f"Average Change: ${average}", file = txt_file)
+    print(f"Average Change: ${round(average,2)}", file = txt_file)
     print(f"Greatest Increase in Profits: {month_dif[i_increase]} (${max_increase})", file = txt_file)
     print(f"Greatest Decrease in Profits: {month_dif[i_decrease]} (${max_decrease})", file = txt_file)
 
