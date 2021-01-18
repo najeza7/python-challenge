@@ -12,7 +12,7 @@ total = 0   #variable to store the sum of profit/losses
 prof_loss = [] #list to save the profit/losses
 month_ls = [] #list to save months 
 
-# Open the cvs file
+# Open the csv file
 with open(csvpath, "r") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     csvheader = next(csvreader) #skip the header
@@ -46,7 +46,7 @@ with open(csvpath, "r") as csvfile:
     # Get the index where the greatest decrease in profits is stored
     i_decrease = dif.index(max_decrease)
 
-   
+# Print results in terminal
 print ("Financial Analysis")
 print ("----------------------------")
 print(f"Total Months: {months}")
