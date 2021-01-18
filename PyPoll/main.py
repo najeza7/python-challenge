@@ -34,10 +34,10 @@ w_name = ["O'Tooley" , "Correy", "Khan", "Li"]
 w_votes = [ovotes, cvotes, kvotes, lvotes]
 ls_cand = list(set(candidates))
 total_votes = ovotes + cvotes + kvotes + lvotes
-opercentage = (ovotes/total_votes)*100
-kpercentage = (kvotes/total_votes)*100
-lpercentage = (lvotes/total_votes)*100
-cpercentage = (cvotes/total_votes)*100
+opercentage = "{:.3f}".format((ovotes/total_votes)*100)
+kpercentage = "{:.3f}".format((kvotes/total_votes)*100)
+lpercentage = "{:.3f}".format((lvotes/total_votes)*100)
+cpercentage = "{:.3f}".format((cvotes/total_votes)*100)
 winner = max(w_votes)
 i_winner = w_votes.index(winner)
 
@@ -70,5 +70,4 @@ with open (output_path, "w") as txt_file:
     print ("-------------------------", file = txt_file)
     print (f"Winner: {w_name[i_winner]} ", file = txt_file)
     print ("-------------------------", file = txt_file)
-
     
